@@ -1,6 +1,6 @@
 package co.llanox.alacartaexpress.mobile.data
 
-import co.llanox.alacartaexpress.mobile.ACEErrorHandler.Companion.instance
+import co.llanox.alacartaexpress.mobile.LaCoroErrorHandler
 import co.llanox.alacartaexpress.mobile.ErrorHandler
 import co.llanox.alacartaexpress.mobile.data.CustomerData.parseCustomer
 import co.llanox.alacartaexpress.mobile.model.Order
@@ -18,7 +18,7 @@ import java.util.ArrayList
  * Created by jgabrielgutierrez on 15-07-22.
  */
 class OrderDataImpl : OrderData {
-    private val errorHandler: ErrorHandler?
+    private val errorHandler: ErrorHandler = LaCoroErrorHandler
     override fun asyncFindAll(listener: RetrievedDataListener<Order>, vararg params: String) {
         val query = ParseQuery.getQuery<ParseObject>(Order.NAME)
         query.addDescendingOrder("createdAt")
@@ -211,7 +211,4 @@ class OrderDataImpl : OrderData {
         }
     }
 
-    init {
-        errorHandler = instance
-    }
 }

@@ -1,8 +1,8 @@
 package co.llanox.alacartaexpress.mobile.data
 
-import co.llanox.alacartaexpress.mobile.ACEErrorHandler.Companion.instance
 import co.llanox.alacartaexpress.mobile.Constants
 import co.llanox.alacartaexpress.mobile.ErrorHandler
+import co.llanox.alacartaexpress.mobile.LaCoroErrorHandler
 import co.llanox.alacartaexpress.mobile.model.Product
 import com.parse.ParseObject
 import com.parse.ParseQuery
@@ -12,11 +12,7 @@ import java.util.ArrayList
  * Created by jgabrielgutierrez on 15-07-23.
  */
 class ProductData : ObjectData<Product> {
-    private var errorHandler: ErrorHandler? = null
-
-    init {
-        errorHandler = instance
-    }
+    private var errorHandler: ErrorHandler = LaCoroErrorHandler
 
 
     override fun asyncFindAll(listener: RetrievedDataListener<Product>, vararg params: String) {

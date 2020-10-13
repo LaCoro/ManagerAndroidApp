@@ -1,8 +1,9 @@
 package co.llanox.alacartaexpress.admin.messages
 
+import android.content.Context
 import android.util.Log
-import co.llanox.alacartaexpress.mobile.ACEErrorHandler
-import co.llanox.alacartaexpress.mobile.Constants
+import co.llanox.alacartaexpress.admin.R
+import co.llanox.alacartaexpress.mobile.LaCoroErrorHandler
 import com.pubnub.api.PNConfiguration
 import com.pubnub.api.PubNub
 import com.pubnub.api.callbacks.PNCallback
@@ -16,20 +17,21 @@ import com.pubnub.api.models.consumer.push.PNPushAddChannelResult
 import java.util.ArrayList
 import java.util.Arrays
 
-class MessagesHandler private constructor() : RealTimeMessages {
-    private val pubnub: PubNub
-    private var errorHandler: ACEErrorHandler?
-    private var mRealTimeMessagesListeners = ArrayList<RealTimeMessagesListener>()
+object MessagesHandler: RealTimeMessages {
+    private lateinit var pubnub: PubNub
+    private val errorHandler = LaCoroErrorHandler
+    private var mRealTimeMessagesListeners = arrayListOf<RealTimeMessagesListener>()
 
-    init {
+    fun init(context: Context){
         mRealTimeMessagesListeners = ArrayList()
-        errorHandler = ACEErrorHandler.instance
         val pnConfiguration = PNConfiguration()
-        pnConfiguration.subscribeKey = Constants.PubNubSettings.SUBSCRIBE_KEY
-        pnConfiguration.publishKey = Constants.PubNubSettings.PUBLISH_KEY
+        pnConfiguration.subscribeKey = context.getString(R.string.pubnub_subscribe_key)
+        pnConfiguration.publishKey = context.getString(R.string.pubnub_publish_key)
         pnConfiguration.isSecure = true
         pubnub = PubNub(pnConfiguration)
+
     }
+
 
     private val messageCallback: SubscribeCallback = object : SubscribeCallback() {
         override fun status(pubnub: PubNub, status: PNStatus) {
@@ -105,18 +107,6 @@ class MessagesHandler private constructor() : RealTimeMessages {
         })
     }
 
-    companion object {
-        @JvmStatic
-        var instance: MessagesHandler? = null
-            get() {
-                if (field == null) {
-                    field = MessagesHandler()
-                }
-                return field
-            }
-            private set
-        val TAG = MessagesHandler::class.java.simpleName
-    }
-
+    val TAG = MessagesHandler::class.java.simpleName
 
 }

@@ -50,7 +50,7 @@ class OrderListActivity : AppCompatActivity(), OnItemClickListener, OrderListVie
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_order_list)
         val applicationSessionHelper = (this.application as ACEApplication).applicationSession
-        presenter = MessagesHandler.instance?.let { OrderListPresenter(it, applicationSessionHelper) }
+        presenter = MessagesHandler?.let { OrderListPresenter(it, applicationSessionHelper) }
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
         if (toolbar != null) {

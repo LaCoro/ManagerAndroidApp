@@ -82,10 +82,12 @@ fun setupVariables(environmentPropertiesFile: String, buildType: BuildType){
     }else{
         RuntimeException("Missing file $environmentPropertiesFile in the root project")
     }
-//    val local = gradleLocalProperties(rootDir)
 
     buildType.resValue("string", "parse_base_url",local.getProperty("BASE_URL",""))
     buildType.resValue("string","parse_application_id",local.getProperty("PARSE_APPLICATION_ID",""))
     buildType.resValue("string","parse_client_id",local.getProperty("PARSE_CLIENT_ID",""))
+
+    buildType.resValue("string","pubnub_subscribe_key",local.getProperty("PUBLISH_KEY",""))
+    buildType.resValue("string","pubnub_publish_key",local.getProperty("SUBSCRIBE_KEY",""))
 }
 

@@ -136,15 +136,8 @@
     <string name="txt_order_placed_state"> PLACED </string>
 
     <string name="txt_msg_push_notification_new_order">New Order in The Inbox</string>
-
-    <string name="com.pubnub.publishKey" translatable="false" tools:ignore="ExtraTranslation">***REMOVED***</string>
-    <string name="com.pubnub.secretKey" translatable="false" tools:ignore="ExtraTranslation">***REMOVED***</string>
-    <string name="com.pubnub.subscribeKey" translatable="false" tools:ignore="ExtraTranslation">***REMOVED***</string>
-
     <string name="default_channel_id" translatable="false">Admin App</string>
-
     <string name="validation_err_not_allowed_age">Not Allowed Age</string>
-
     <string name="txt_push_notification_title">Lacoro notification</string>
     <string name="dummy_cash_amount" translatable="false">50000</string>
 

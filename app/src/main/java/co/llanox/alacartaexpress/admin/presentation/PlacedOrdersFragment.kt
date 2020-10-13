@@ -15,9 +15,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import co.llanox.alacartaexpress.admin.R
 import co.llanox.alacartaexpress.admin.adapters.OrderAdapter
-import co.llanox.alacartaexpress.admin.presentation.PlacedOrdersFragment
-import co.llanox.alacartaexpress.mobile.ACEErrorHandler.Companion.instance
 import co.llanox.alacartaexpress.mobile.ErrorHandler
+import co.llanox.alacartaexpress.mobile.LaCoroErrorHandler
 import co.llanox.alacartaexpress.mobile.data.OrderData
 import co.llanox.alacartaexpress.mobile.data.OrderDataImpl
 import co.llanox.alacartaexpress.mobile.data.RetrievedDataListener
@@ -26,7 +25,7 @@ import co.llanox.alacartaexpress.mobile.model.Order
 class PlacedOrdersFragment: Fragment(), RetrievedDataListener<Order> {
     private var mOrderData: OrderData? = null
     private var mContentActivity: AppCompatActivity? = null
-    private var errorHandler: ErrorHandler? = null
+    private var errorHandler: ErrorHandler = LaCoroErrorHandler
 
     /**
      * The fragment's ListView/GridView.
@@ -40,7 +39,6 @@ class PlacedOrdersFragment: Fragment(), RetrievedDataListener<Order> {
     private var mAdapter: ArrayAdapter<*>? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        errorHandler = instance
         mOrderData = OrderDataImpl()
         setHasOptionsMenu(true)
     }
@@ -70,7 +68,7 @@ class PlacedOrdersFragment: Fragment(), RetrievedDataListener<Order> {
     }
 
     override fun onError(error: Throwable) {
-        errorHandler!!.showHumanReadableError(error, this@PlacedOrdersFragment.activity!!)
+        errorHandler.showHumanReadableError(error, this@PlacedOrdersFragment.activity!!)
     }
 
     override fun onAttach(activity: Activity) {

@@ -16,7 +16,7 @@ import co.llanox.alacartaexpress.admin.R
 import co.llanox.alacartaexpress.admin.adapters.OrderDetailAdapter
 import co.llanox.alacartaexpress.admin.messages.MessagesHandler
 import co.llanox.alacartaexpress.admin.messages.RealTimeMessages
-import co.llanox.alacartaexpress.mobile.ACEErrorHandler
+import co.llanox.alacartaexpress.mobile.LaCoroErrorHandler
 import co.llanox.alacartaexpress.mobile.Constants
 import co.llanox.alacartaexpress.mobile.ErrorHandler
 import co.llanox.alacartaexpress.mobile.data.OrderData
@@ -44,8 +44,8 @@ class PlacedOrderDetailsFragment
     private var mOrderData: OrderData? = null
     private var mBtnChangeOrderStatus: Button? = null
     private var mBtnCancelOrder: Button? = null
-    private var realTimeMessages: RealTimeMessages? = null
-    private var errorHandler: ErrorHandler? = null
+    private val realTimeMessages: RealTimeMessages = MessagesHandler
+    private val errorHandler:ErrorHandler = LaCoroErrorHandler
 
     /**
      * The fragment's ListView/GridView.
@@ -118,9 +118,8 @@ class PlacedOrderDetailsFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        errorHandler = ACEErrorHandler.instance
+
         mContentActivity = this.activity as AppCompatActivity?
-        realTimeMessages = MessagesHandler.instance
         if (arguments != null) {
             mOrderDetails = arguments?.getSerializable(Constants.ORDER_DETAILS_OBJECT_KEY) as HashMap<String, OrderDetail>
             mOrder = arguments?.getSerializable(Constants.ORDER_OBJECT_KEY) as Order?

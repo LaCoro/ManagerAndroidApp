@@ -5,8 +5,9 @@ import android.app.Application;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
 import com.parse.Parse;
 
-import co.llanox.alacartaexpress.mobile.ACEErrorHandler;
+import co.llanox.alacartaexpress.admin.messages.MessagesHandler;
 import co.llanox.alacartaexpress.mobile.ApplicationSessionHelper;
+import co.llanox.alacartaexpress.mobile.LaCoroErrorHandler;
 
 /**
  * Created by jgabrielgutierrez on 15-09-01.
@@ -27,9 +28,9 @@ public class ACEApplication extends Application {
 
         Parse.initialize(builder.build());
         Parse.setLogLevel(Parse.LOG_LEVEL_VERBOSE);
-
+        MessagesHandler.INSTANCE.init(this);
         FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true);
-        ACEErrorHandler.getInstance().updateCurrentUserID();
+        LaCoroErrorHandler.INSTANCE.updateCurrentUserID();
         applicationSession = ApplicationSessionHelper.getInstance(this);
 
     }

@@ -6,7 +6,7 @@ import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
-import co.llanox.alacartaexpress.mobile.ACEErrorHandler;
+import co.llanox.alacartaexpress.mobile.LaCoroErrorHandler;
 import co.llanox.alacartaexpress.mobile.ErrorHandler;
 import co.llanox.alacartaexpress.mobile.model.User;
 
@@ -15,10 +15,9 @@ import co.llanox.alacartaexpress.mobile.model.User;
  */
 public class UserData implements ObjectData<User> {
 
-    private ErrorHandler errorHandler;
+    private ErrorHandler errorHandler = LaCoroErrorHandler.INSTANCE ;
 
     public UserData() {
-        errorHandler = ACEErrorHandler.getInstance();
     }
 
 

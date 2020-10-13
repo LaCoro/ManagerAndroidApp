@@ -9,7 +9,7 @@ import com.parse.ParseException
 /**
  * Created by jgabrielgutierrez on 15-10-17.
  */
-class ACEErrorHandler private constructor() : ErrorHandler {
+object LaCoroErrorHandler : ErrorHandler {
 
     override fun showHumanReadableError(error: Throwable, ctx: Context): Int {
         if (error is ParseException) {
@@ -38,9 +38,4 @@ class ACEErrorHandler private constructor() : ErrorHandler {
         crashlytics.recordException(error)
     }
 
-    companion object {
-        @JvmStatic
-        val instance: ACEErrorHandler? = null
-            get() = field ?: ACEErrorHandler()
-    }
 }

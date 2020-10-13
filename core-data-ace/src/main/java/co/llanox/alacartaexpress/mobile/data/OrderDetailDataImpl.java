@@ -8,7 +8,7 @@ import com.parse.ParseQuery;
 import java.util.ArrayList;
 import java.util.List;
 
-import co.llanox.alacartaexpress.mobile.ACEErrorHandler;
+import co.llanox.alacartaexpress.mobile.LaCoroErrorHandler;
 import co.llanox.alacartaexpress.mobile.ErrorHandler;
 import co.llanox.alacartaexpress.mobile.model.Order;
 import co.llanox.alacartaexpress.mobile.model.OrderDetail;
@@ -19,10 +19,9 @@ import co.llanox.alacartaexpress.mobile.model.Product;
  */
 public class OrderDetailDataImpl implements OrderDetailData {
 
-    private ErrorHandler errorHandler;
+    private ErrorHandler errorHandler = LaCoroErrorHandler.INSTANCE;
 
     public OrderDetailDataImpl( ) {
-        this.errorHandler = ACEErrorHandler.getInstance();
     }
 
     @Override

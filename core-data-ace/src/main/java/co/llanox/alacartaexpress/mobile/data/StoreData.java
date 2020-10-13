@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-import co.llanox.alacartaexpress.mobile.ACEErrorHandler;
+import co.llanox.alacartaexpress.mobile.LaCoroErrorHandler;
 import co.llanox.alacartaexpress.mobile.ACEUtil;
 import co.llanox.alacartaexpress.mobile.ErrorHandler;
 import co.llanox.alacartaexpress.mobile.model.Store;
@@ -22,9 +22,8 @@ public class StoreData implements ObjectData<Store> {
 
     public static final String STORE_OBJECT_NAME = "Store";
 
-    private ErrorHandler errorHandler;
+    private ErrorHandler errorHandler = LaCoroErrorHandler.INSTANCE;
     public StoreData() {
-        errorHandler = ACEErrorHandler.getInstance();
     }
 
 
@@ -36,11 +35,7 @@ public class StoreData implements ObjectData<Store> {
         query.whereEqualTo("active", true);
         query.findInBackground(new FindCallback<ParseObject>() {
             public void done(List<ParseObject> objects, ParseException e) {
-
-
-
                 if (e == null) {
-
                     List<Store> stores = new ArrayList<Store>();
                     Store store = null;
 
