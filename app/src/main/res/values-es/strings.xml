@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LaCoro(Admin)</string>
+
+    <string name="err_general_error">" Código de Error (%d). Por favor, contacte el administrador."</string>
+
+    <!-- Login -->
+    <string name="err_non_authorized_user">Usuario no autorizado</string>
+
+    <string name="lb_sign_in">Ingresar</string>
+    <string name="hint_email">usuario o email registrado</string>
+    <string name="hint_password">contraseña</string>
+    <string name="lb_sign_up">Registrarse</string>
+    <string name="title_activity_content">Lacoro</string>
+
+     <!-- Placed Orders -->
+    <string name="title_fragment_placed_orders">Pedidos Solicitados </string>
+    <string name="txt_order_id">Pedido N° %1$s</string>
+    <string name="txt_order_created_at">Fecha %1$s</string>
+    <string name="txt_order_delivery_address">Dirección de Entrega</string>
+    <string name="txt_order_buyer_info">Comprador</string>
+    <string name="txt_placed_order_demo_buyer_info">8888888888-Juan Perez Gomez</string>
+
+
+
+    <!--Stores-->
+    <string name="text_search_stores">Encuentralo aquí...</string>
+    <string name="txt_closed_store">Cerrado</string>
+    <string name="txt_opened_store">Abierto</string>
+    <string name="txt_store_name_demo">Store XYZ</string>
+    <string name="txt_store_details">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </string>
+
+
+    <!--Products-->
+    <string name="title_fragment_products">Productos</string>
+
+    <string name="txt_product_name_demo">Item demo</string>
+    <string name="txt_product_category_demo">Categoria</string>
+    <string name="txt_product_demo_details">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum socii</string>
+    <string name="txt_product_price">$%1$1.0f</string>
+    <string name="lb_product_total">Total ( %1$s ):$%2$1.0f</string>
+    <string name="lb_product_s">Items $%s</string>
+
+    <string name="txt_product_name"> %1$s (%2$s) </string>
+
+
+    <string name="lb_product_btn_view_order">Ver Pedido</string>
+
+    <!--Order-->
+
+    <string name="title_fragment_view_order">Pedido</string>
+    <string name="txt_order_description">Solicitudes</string>
+    <string name="txt_confirm_order">Confirmar</string>
+
+
+    <string name="lb_price">$%1$1.0f</string>
+    <string name="txt_total">Total</string>
+    <string name="txt_delivery_cost">Domicilio</string>
+    <string name="txt_order_cost">Pedido</string>
+
+    <!-- Register -->
+
+    <string name="title_fragment_user_register">Registro</string>
+
+    <string name="hint_fullname">Nombre Completo</string>
+    <string name="hint_phone_number">Número de teléfono</string>
+    <string name="hint_email_register">Su correo electrónico aquí</string>
+    <string name="hint_birthday">Fecha de Nacimiento</string>
+    <string name="lb_country">País</string>
+    <string name="lb_city">Ciudad</string>
+    <string name="lb_btn_sign_up">Registrar</string>
+    <string name="lb_et_address">Dirección</string>
+    <string name="lb_et_cash">Efectivo</string>
+    <string name="title_registered_user_successfully">Usuario Registrado!!</string>
+    <string name="title_great">Excelente!!</string>
+
+
+
+    <!-- Confirm Order -->
+    <string name="title_fragment_confirm_order">Confirmar Pedido</string>
+    <string name="lb_btn_confirm">Confirmar</string>
+    <string name="hint_address">Dirección de entrega del domicilio</string>
+    <string name="hint_cash_money">Efectivo para pagar</string>
+    <string name="hint_buyer">Empresa/Persona Natural</string>
+    <string name="hint_personal_id">NIT/Cedula</string>
+    <string name="txt_order_placed">Tu pedido fue enviado con Exito!!</string>
+    <string name="title_order_placed">Excelente!!</string>
+    <string name="lb_btn_schedule_delivery">Programar entrega</string>
+    <string name="txt_order_delivery_date">Entrega programada para %1$s </string>
+
+
+    <string name="validation_err_not_allowed_age">Edad no permitida</string>
+    <string name="text_refresh_orders">Actualizar Ordenes</string>
+    <string name="text_logout">Salir</string>
+
+
+    <!--Placed Order List-->
+    <string name="txt_placed_orders_updated">Ordenes pendientes actualizadas!</string>
+    <string name="txt_err_updating_placed_orders">Error actualizando ordenes pendientes.</string>
+    <string name="txt_try_again_action">Intentar nuevamente</string>
+
+
+    <string name="title_order_list">Pedidos</string>
+    <string name="title_order_detail">Datos Del Pedido</string>
+    <!--Placed Order Tabs-->
+    <string name="lb_tab_order_info">Información Pedido</string>
+    <string name="lb_tab_order_details">Detalles Pedido</string>
+
+    <!--Placed Order CardView General Info-->
+    <string name="txt_customer_info">Cliente </string>
+    <string name="txt_customer_phone">Teléfono</string>
+    <string name="txt_order_date">Solicitado</string>
+    <string name="txt_scheduled_order">Programado</string>
+
+
+    <string name="txt_store_name">Negocio</string>
+    <string name="txt_store_address">Dirección</string>
+    <string name="txt_store_phone">Teléfono</string>
+    <string name="txt_store_city">Ciudad</string>
+
+    <string name="txt_try_again">Intentar nuevamente</string>
+    <string name="txt_err_retrieving_order_details">Error obteniendo los detalles del pedido</string>
+    <string name="txt_err_retrieving_order_info">Error obteniendo información del pedido.</string>
+
+    <string name="txt_cash_amount">Efectivo</string>
+
+    <string name="txt_order_requested">Pedido Solicitado!!</string>
+    <string name="txt_order_canceled">Pedido Cancelado!!</string>
+    <string name="hint_additional_requests"> Sin adiciones !!</string>
+    <string name="txt_cancel_order">Cancelar</string>
+    <string name="txt_order_number">Pedido Nº</string>
+    <string name="txt_request_order">Solicitar</string>
+    <string name="txt_order_placed_state">REALIZADO</string>
+    <string name="txt_order_requested_state">SOLICITADO</string>
+    <string name="txt_order_state_default">@string/txt_order_requested_state</string>
+    <string name="txt_order_canceled_state">CANCELADO</string>
+    <string name="txt_msg_push_notification_new_order">Nueva orden en la lista</string>
+    <string name="txt_push_notification_title">Lacoro notification</string>
+    <string name="err_wrong_user_or_password">Usuario ó contraseña errados. Intente nuevamente.</string>
+
+
+</resources>

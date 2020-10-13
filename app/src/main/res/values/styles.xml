@@ -1,0 +1,40 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="Theme.ACE" parent="Theme.AppCompat.Light">
+
+        <!-- colorPrimary is used for the default action bar background -->
+        <item name="colorPrimary">@color/color_primary_app</item>
+
+        <!-- colorPrimaryDark is used for the status bar -->
+        <item name="colorPrimaryDark">@color/color_primary_dark_app</item>
+        <item name="colorAccent">@color/color_accent_app</item>
+        <item name="android:textColorPrimary">@color/text_color_primary_app</item>
+        <item name="android:textColorSecondary">@color/secondary_text_default_material_light</item>
+        <item name="editTextColor">@color/secondary_text_default_material_light</item>
+
+
+        <!-- colorAccent is used as the default value for colorControlActivated
+             which is used to tint widgets -->
+        <!--<item name="colorAccent">@color/mdtp_accent_color</item>-->
+    </style>
+
+    <!-- This is the custom textview styles for this application -->
+    <style name="Widget.TextView.Custom" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/secondary_text_default_material_light</item>
+    </style>
+
+    <style name="Widget.EditText.Custom" parent="android:Widget.EditText">
+        <item name="android:textColor">@color/secondary_text_default_material_light</item>
+    </style>
+
+    <style name="Theme.ACE.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.ACE.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.ACE.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

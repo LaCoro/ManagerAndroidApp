@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="TAG_ITEM_ID" type="id" />
+    <item name="PRICE_ID" type="id" />
+    <item name="STORE_ID" type="id" />
+    <item name="ORDER_ID" type="id" />
+    <item name="DELIVERY_COST_ID" type="id" />
+
+    <item name="STORE_STATUS" type="id" />
+
+    <item name="GROUP_VIEW_TYPE" type="id" />
+    <item name="ITEM_VIEW_TYPE" type="id" />
+
+</resources>

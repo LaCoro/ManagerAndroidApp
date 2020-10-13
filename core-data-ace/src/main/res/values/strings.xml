@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ACEDataCore</string>
+    <string name="backend_err_email_already_taken">Email already taken. Please, use another email to create a new account</string>
+    <string name="err_general_error"> Error code (%d). Please, contact the administrator.</string>
+</resources>

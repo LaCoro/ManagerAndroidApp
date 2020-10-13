@@ -1,0 +1,28 @@
+# built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Eclipse project files
+.classpath
+.project
+z-validations/.gradle
+z-validations/gradle
+z-validations/z-validations-sample/build
+z-validations/z-validations/build
+gradlew
+gradlew.bat
+z-validations/z-validations-library/build
+publish

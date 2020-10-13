@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ The MIT License (MIT)
+  ~
+  ~ Copyright (c) 2013 Vitaliy Zasadnyy
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy of
+  ~ this software and associated documentation files (the "Software"), to deal in
+  ~ the Software without restriction, including without limitation the rights to
+  ~ use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+  ~ the Software, and to permit persons to whom the Software is furnished to do so,
+  ~ subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+  ~ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+  ~ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+  ~ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+  ~ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  -->
+
+<resources>
+
+    <string name="lib_name">Z-Validations</string>
+
+    <string name="zvalidations_not_positive_integer">El valor debe ser un número entero positivo</string>
+    <string name="zvalidations_empty">El campo no puede estar vacío</string>
+    <string name="zvalidations_not_in_range">El valor debe estar entre %1$d y %2$d</string>
+    <string name="zvalidations_not_email">El texto no es una dirección de email válida</string>
+    <string name="zvalidations_too_short">La longitud mínima del campo es de %1$d caracteres</string>
+    <string name="zvalidations_passwords_dont_match">Las contraseñas no coinciden</string>
+
+</resources>
